@@ -1,3 +1,11 @@
+/* tasti color-> #222020
+   verdi color-> #7fdb7f
+   background-> #f4f4f4
+
+*/
+
+
+
 * {
     margin:0;
     padding:0;
@@ -20,8 +28,9 @@ body{
 } */
 
 .player {
-    background-color: #282828;
-    /* background-color: #136635b8; */
+    background-color: #4ea8bc;
+    /* background-color: #272a2a; */
+    
 }
 
 aside {
@@ -31,7 +40,8 @@ aside {
     top:0;
     left:0;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.7);;
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    background-color: #000;
 }
 
 header {
@@ -40,22 +50,25 @@ header {
     position:fixed;
     top:0;
     left: 180px;
-    /* background-color: #136635b8; */
-    background-color: #282828;
+    background-color: #d17866;
 }
 
 main {
     width: calc(100% - 180px);
     height:calc(100vh - 200px);
     color:#fff;
-    padding:50px;
+    padding:50px;   /* Musica vettore creata da pch.vector - it.freepik.com */
     overflow-y: auto;
     /* margin: 100px 0 0 50px; */
     position:fixed;
     top:100px;
     left:180px;
-    background: rgb(94,154,86);
-    background: linear-gradient(90deg, rgba(94,154,86,1) 0%, rgba(39,121,73,1) 67%, rgba(29,113,19,1) 100%); 
+    color: rgb(231, 231, 231);
+    background-image: url('https://cdn.dribbble.com/users/2859475/screenshots/6755191/artboard_1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
 }
 
 .player {
@@ -93,6 +106,8 @@ main {
     justify-content: center;
     padding: 20px;
     border-radius: 10px;
+    position: relative;
+    align-items: center;
     /*float: left;
     margin: 30px;
     border-radius: 10px; 
@@ -106,6 +121,28 @@ main {
     background: #282828; */
 }
 
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.play_overlay{
+    opacity: 0;
+    transition: 0.2s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    font-size: 40px;
+}
 
 .contain_img>img{
     width: 150px;
@@ -128,9 +165,14 @@ main {
     display: flex;
 }
 
+.info-home div:last-child{
+    color: rgb(208, 208, 208);
+}
+
 .icon{
     width: 30px;
     padding-bottom: 10px;
+    color: #7fdb7f;
 }
 
 .icon-infoSecond{
@@ -175,13 +217,25 @@ main {
 
 .contain-header-flex div{
     padding-right: 30px;
-    color: white;
+    color: #222020;
+    transition: 1;
+    cursor: pointer;
 }
 
 .contain-header-flex div>button{
-    padding: 15px 40px;
+    padding: 12px 40px;
     border-radius: 21px;
-    border: transparent;
+    border: 1px solid #7fdb7f;
+    background: transparent;
+    font-size: 17px;
+    color: #7fdb7f;
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+.dropdown{
+    /* opacity: 0; */
+    display: none;
 }
 
 
@@ -282,4 +336,50 @@ main {
      
     background-position:center;
     z-index: 2;
+  }
+
+
+
+
+
+
+  /* Eventi */
+
+  .contain-header-flex div>button:hover{
+      background-color: lightgreen;
+      padding: 15px 40px;
+      color: white;
+  }
+
+  .contain-header-flex div:hover{
+      color: white;
+  }
+
+  [class^="info-"] div:last-child:hover{
+      color: lightgreen;
+      cursor: pointer;
+  }
+
+  .icon-infoSecond div:last-child:hover{
+      cursor: pointer;
+      color: lightgreen;
+  }
+
+  .infoSecond .playlist:hover{
+      cursor: pointer;
+      color: lightgreen;
+  }
+
+  #radio:hover{
+      cursor: pointer;
+      color: lightgreen;
+  }
+
+
+  .overlay:hover{
+      background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .play_overlay:hover{
+    opacity: 1;
   }

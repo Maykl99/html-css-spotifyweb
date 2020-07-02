@@ -8,3 +8,31 @@
     }
 
 }
+
+
+@media screen and (max-width: 480px){
+    .dropdown{
+        /* opacity: 1; */
+        display: inline-block;
+    }
+
+    aside{
+        width: 70px;
+    }
+
+    main,header{
+        width: calc(100% - 70px);
+        left: 70px;
+    }
+
+    .contain-header-flex{
+        justify-content: center;
+    }
+    /* .contain-header-flex div:first-child, .contain-header-flex div:nth-child(2){
+        opacity: 0;
+    } */
+
+    .info-home div:last-child, .info-search div:last-child, .info-library div:last-child{
+        display: none;
+    }
+}
