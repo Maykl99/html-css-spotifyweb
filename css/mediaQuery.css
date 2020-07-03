@@ -172,6 +172,47 @@
     aside{
         background-color: #3e069f; /* #404027 */
     }
+
+    .contain-header-flex div>button:hover{
+        background-color: #3f2981;
+        padding: 15px 40px;
+        color: white;
+    }
+  
+    .contain-header-flex div:hover{
+        color: #5839b5;
+    }
+  
+    [class^="info-"] div:last-child:hover{
+        color: #5839b5;
+        cursor: pointer;
+    }
+  
+    .icon-infoSecond div:last-child:hover{
+        cursor: pointer;
+        color: #5839b5;
+    }
+  
+  /*   .infoSecond .playlist:hover{
+        cursor: pointer;
+        color: lightgreen;
+    } */
+  
+    #radio:hover{
+      cursor: pointer;
+      color: #5839b5;
+    }
+  
+  
+    .info-policy *:hover{
+      color: #5839b5 !important;
+      cursor: pointer;
+    }
+  
+    .icon-player div:hover, .icon:hover, .infoSecond .playlist:hover{
+        color: #5839b5;
+        cursor: pointer;
+    }
 }
 
 
