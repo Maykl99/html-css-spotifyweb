@@ -4,8 +4,6 @@
 
 */
 
-
-
 * {
     margin:0;
     padding:0;
@@ -17,20 +15,14 @@ body{
     font-family: 'Noto Sans JP', sans-serif;
 }
 
-/* aside, header, main{
-    opacity:0.5;
-} */
+.container{
+    /* height: 100vh; */
+    display: flex;
+    flex-wrap: wrap;
+}
 
-
-
-/* main {
-    background-color: rgb(128, 61, 61);
-} */
-
-.player {
-    background-color: #150625;;
-    /* background-color: #272a2a;  #ab235f*/
-    
+header,.player {
+    background-color: #150625;
 }
 
 aside {
@@ -40,7 +32,6 @@ aside {
     top:0;
     left:0;
     z-index: 1;
-    /* background-color: rgba(0, 0, 0, 0.7); */
     background-color: rgb(78,13,147);
 }
 
@@ -50,21 +41,19 @@ header {
     position:fixed;
     top:0;
     left: 180px;
-    background-color: #150625;  /*  #d17866; #ab235f */
 }
 
 main {
     width: calc(100% - 180px);
     height:calc(100vh - 170px);
     color:#fff;
-    padding:50px;   /* Musica vettore creata da pch.vector - it.freepik.com */
+    padding:50px; 
     overflow-y: auto;
-    /* margin: 100px 0 0 50px; */
     position:fixed;
     top:70px;
     left:180px;
     color: rgb(231, 231, 231);
-    background-image: url('https://cdn.dribbble.com/users/3281732/screenshots/6747768/samji_illustrator_2x.jpeg');
+    background-image: url('https://cdn.dribbble.com/users/3281732/screenshots/6747768/samji_illustrator_2x.jpeg'); /* Musica vettore creata da pch.vector - it.freepik.com */
     background-color: #30045d;
     background-repeat: no-repeat;
     background-position: center;
@@ -80,108 +69,7 @@ main {
 }
 
 
-.container{
-    /* height: 100vh; */
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.name_info_main{
-    width: 100%;
-}
-
-.name_info_main>ul{
-    display: flex;
-    justify-content: center;
-}
-
-.name_info_main>ul li{
-    list-style-type: none;
-    padding-left: 20px;
-    text-transform: uppercase;
-    font-weight: 501;
-    transition: 0.5s;
-}
-
-
-
-.name-album{
-    display: flex;
-    color: white;
-    width: 100%;
-    justify-content: flex-start;
-    margin-left: 30px;
-    font-size: 40px;
-}
-
-.card{
-    width: 200px;
-    height: 200px;
-    background-color: transparent;
-    display: flex;
-    margin: 30px 25px;
-    /* flex-grow: 2; */
-    flex-shrink: 2;
-    justify-content: center;
-    padding: 20px;
-    border-radius: 10px;
-    position: relative;
-    align-items: center;
-    /*float: left;
-    margin: 30px;
-    border-radius: 10px; 
-    display: flex;
-    flex-wrap: wrap;
-    overflow-y: scroll;
-    height: 380px; 
-    width: 200px; 
-     flex-basis: 200px;
-    border-radius: 8px;
-    background: #282828; */
-}
-
-.overlay{
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border-radius: 10px;
-    transition: 0.2s;
-}
-
-.overlay:hover{
-    background-color: rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-}
-
-.play_overlay{
-    opacity: 0;
-    transition: 0.2s;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50% , -50%);
-    font-size: 40px;
-}
-
-.container .play_overlay:hover{
-    opacity: 1;
-    color: #8a5bbb;
-    cursor: pointer;
-}
-
-.contain_img>img{
-    width: 100%;
-    height: 100%;
-}
-
-
-
-.aside{
+.aside{   /* Aside */ 
     display: flex;
     flex-direction: column;
     color: white;
@@ -242,9 +130,9 @@ main {
     font-size: 10px;
     padding-top: 150px;
     color: gainsboro;
-} /* Fine aside */
+}                       /* Fine aside */
 
-/* Header */
+                        /* Header */
 
 .contain-header-flex{
     height: 100%;
@@ -295,12 +183,90 @@ main {
 .dropdown{
     /* opacity: 0; */
     display: none;
+}               /* fine header */
+
+                /* Main */
+
+.name_info_main{ /* menu centrale main */
+    width: 100%;
 }
 
+.name_info_main>ul{
+    display: flex;
+    justify-content: center;
+}
 
+.name_info_main>ul li{
+    list-style-type: none;
+    padding-left: 20px;
+    text-transform: uppercase;
+    font-weight: 501;
+    transition: 0.5s;
+}
 
+.name-album{
+    display: flex;
+    color: white;
+    width: 100%;
+    justify-content: flex-start;
+    margin-left: 30px;
+    font-size: 40px;
+}
 
+.card{
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
+    display: flex;
+    margin: 30px 25px;
+    flex-shrink: 2;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    align-items: center;
+}
 
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.overlay:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.play_overlay{
+    opacity: 0;
+    transition: 0.2s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    font-size: 40px;
+}
+
+.container .play_overlay:hover{
+    opacity: 1;
+    color: #8a5bbb;
+    cursor: pointer;
+}
+
+.contain_img>img{
+    width: 100%;
+    height: 100%;
+}                       /* Fine main*/
+
+                        /* Player/footer */
 .player-flex{
     height: 100%;
     width: 100%;
@@ -360,20 +326,10 @@ main {
     padding-left: 30px;
 }
 
+                         /* fine Player/footer */
 
 
-
-
-
-
-
-
-
-
-
-
-
-/* Evento */
+/* Evento SCHERMATA DI CARICAMENTO */
 
 #schermata_caricamento {
  
@@ -397,10 +353,6 @@ main {
 
     z-index: 2;
   }
-
-
-
-
 
 
   /* Eventi */
@@ -453,21 +405,3 @@ main {
     cursor: pointer;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* play*/
-.controlBar{
-    background-color: transparent !important;
-    width: 800px !important;
-} 
